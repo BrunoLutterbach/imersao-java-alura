@@ -10,7 +10,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="alura-stickers" target="18" />
+      <module name="alura-stickers" target="11" />
     </bytecodeTargetLevel>
   </component>
 </project>

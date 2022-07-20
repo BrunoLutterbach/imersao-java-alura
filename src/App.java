@@ -1,16 +1,15 @@
-import java.io.IOException;
+import java.io.InputStream;
 import java.net.URI;
+import java.net.URL;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 import java.util.List;
 import java.util.Map;
 
-import static java.lang.Double.parseDouble;
-
 public class App {
 
-    public static void main(String[] args) throws IOException, InterruptedException {
+    public static void main(String[] args) throws Exception {
 
         // Fazer uma conexão HTTP e buscar os top 250 filmes
         HttpClient client = HttpClient.newHttpClient();
@@ -26,14 +25,16 @@ public class App {
 
         // Exibir os dados
         for (Map<String, String> filme : listaDeFilmes) {
+
+            String url = filme.get("image");
+            String titulo = filme.get("title").replace(":", "-") + ".png";
+            Double notaFilme = Double.parseDouble(filme.get("imDbRating"));
+            String frase = "TEXTO";
+            InputStream inputStream = new URL(url).openStream();
+            StickerGenerator stickerGenerator = new StickerGenerator();
+            stickerGenerator.cria(inputStream, titulo, notaFilme, frase);
+
             System.out.println("Title: " + filme.get("title"));
-            System.out.println("Poster: " + filme.get("image"));
-            System.out.println("Rating: " + filme.get("imDbRating"));
-            double estrelas = parseDouble(filme.get("imDbRating"));
-            for (int i = 0; i < Math.round(estrelas); i++) {
-                System.out.print("🌟");
-            }
-            System.out.println();
         }
     }
 }
