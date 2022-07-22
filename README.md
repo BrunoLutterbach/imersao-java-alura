@@ -11,6 +11,25 @@ Projeto realizado durante a Imersão Java da Alura, onde foi utilizado a API do 
 <h3 align="center"> 📖 Aula 01 </h3>
 
 <p> Foi consumido a API do IMDB dos Top 250 Filmes e exibido no console o Título, Poster e Rating.</p>
-<p> Realizado também o desafio de exibir estrelas de acordo com o Rating.</p>
+<p> Desafios: </p>
+<ul>
+<li>Exibir estrelas no console de acordo com a nota</li>
+</ul>
 
 <img src="https://user-images.githubusercontent.com/95001637/179854918-412abcca-da9c-41e4-8154-94baf7bf5bed.png">
+
+<hr>
+
+<h3 align="center"> 📖 Aula 02 </h3>
+
+<p>Foi realizado a leitura da imagem para transformar os posters do filme em figurinha, com customizações</p>
+<p>Desafios: </p>
+<ul>
+<li>Exibir texto de acordo com a nota</li>
+<li>Centralizar o texto</li>
+<li>Exibir a nota no topo da figurunha</li>
+<li>Selo de aprovado/negado de acordo com a nota</li>
+</ul>
+
+![The Godfather](https://user-images.githubusercontent.com/95001637/180095505-e856e807-c426-4432-b3c3-e62fdcfb83f6.png)
+
