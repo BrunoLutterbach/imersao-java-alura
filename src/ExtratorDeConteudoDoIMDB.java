@@ -13,7 +13,9 @@ public class ExtratorDeConteudoDoIMDB implements ExtratorDeConteudo {
         // Converter a lista de atributos em uma lista de conteudos
         List<Conteudo> conteudos = new ArrayList<>();
         for (Map<String, String> atributos : listaDeAtributos) {
-            Conteudo conteudo = new Conteudo(atributos.get("title"), atributos.get("image").replaceAll("(@+)(.*).jpg$", "$1.jpg"));
+            String data = null;
+            Double nota = Double.parseDouble(atributos.get("imDbRating"));
+            Conteudo conteudo = new Conteudo(atributos.get("title"), atributos.get("image").replaceAll("(@+)(.*).jpg$", "$1.jpg"), nota, data);
             conteudos.add(conteudo);
         }
         return conteudos;

@@ -8,16 +8,18 @@ public class App {
 
         // Fazer uma conexão HTTP e buscar os top 250 filmes
 
-//        List<Conteudo> conteudos = ApiUrlEnum.API_NASA.getExtrator().extraiConteudos(ClienteHttp.buscaDados(ApiUrlEnum.API_NASA.getUrl()));
-        List<Conteudo> conteudos = ApiUrlEnum.API_IMDB.getExtrator().extraiConteudos(ClienteHttp.buscaDados(ApiUrlEnum.API_IMDB.getUrl()));
+        List<Conteudo> conteudos = ApiUrlEnum.API_NASA.getExtrator().extraiConteudos(ClienteHttp.buscaDados(ApiUrlEnum.API_NASA.getUrl()));
+//        List<Conteudo> conteudos = ApiUrlEnum.API_IMDB.getExtrator().extraiConteudos(ClienteHttp.buscaDados(ApiUrlEnum.API_IMDB.getUrl()));
 
         for (Conteudo conteudo : conteudos) {
 
+            String data = conteudo.data();
+            Double nota = conteudo.nota();
             String frase = conteudo.titulo();
             String nomeArquivo = conteudo.titulo().replace(":", "-") + ".png";
             InputStream inputStream = new URL(conteudo.urlImagem()).openStream();
             StickerGenerator stickerGenerator = new StickerGenerator();
-            stickerGenerator.cria(inputStream, nomeArquivo, frase);
+            stickerGenerator.cria(inputStream, nomeArquivo, frase, nota, data);
             System.out.println(conteudo.titulo());
 
         }

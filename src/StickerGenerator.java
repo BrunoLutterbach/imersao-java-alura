@@ -6,12 +6,15 @@ import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
+import java.text.SimpleDateFormat;
+import java.time.Instant;
+import java.util.Date;
 
 import static java.awt.Transparency.TRANSLUCENT;
 
 public class StickerGenerator {
 
-    public void cria(InputStream inputStream, String nomeArquivo, String frase) throws Exception {
+    public void cria(InputStream inputStream, String nomeArquivo, String frase, Double nota, String data) throws Exception {
 
         // Leitura da imagem
 //        InputStream inputStream = new FileInputStream(new File("entrada/filme.jpg"));
@@ -36,6 +39,21 @@ public class StickerGenerator {
         int tamanhoFrase = graphics2D.getFontMetrics().stringWidth(frase);
         int localFrase = (novaImagem.getWidth() - tamanhoFrase) / 2;
         graphics2D.drawString(frase, localFrase, novaAltura - 80);
+
+        // Adicionar nota/Data do filme na nova imagem
+        int localNota = novaImagem.getHeight() / 20;
+
+        if (nota == 0) {
+            graphics2D.drawString("Data: " + data, (novaImagem.getWidth() - graphics2D.getFontMetrics().stringWidth(data) * 3) + 40, 70);
+        }
+        if (nota >= 9.0) {
+            graphics2D.drawString("Nota: " + nota, 10, localNota);
+            graphics2D.drawImage(ImageIO.read(new File("selos/aprovado.png")), novaImagem.getWidth() - 250 / 2, 0, null);
+        }
+        if (nota < 9 && nota > 0) {
+            graphics2D.drawString("Nota: " + nota, 10, localNota);
+            graphics2D.drawImage(ImageIO.read(new File("selos/negado.png")), novaImagem.getWidth() - 250 / 2, 0, null);
+        }
 
         // Nova resolução da imagem(512x512)
         BufferedImage Sticker = resize(novaImagem, 512, 512);
