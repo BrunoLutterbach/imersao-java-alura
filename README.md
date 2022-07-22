@@ -33,3 +33,24 @@ Projeto realizado durante a Imersão Java da Alura, onde foi utilizado a API do 
 
 ![The Godfather](https://user-images.githubusercontent.com/95001637/180095505-e856e807-c426-4432-b3c3-e62fdcfb83f6.png)
 
+<hr>
+
+<h3 align="center"> 📖 Aula 03 </h3>
+
+<p> Foi consumido a API da NASA para trazer novas imagens </p>
+<p>Realizado a refatoração do código, criado a classe ClienteHttp, que consome as API</p>
+<p> Criado a classe Conteudo, com os atributos titulo, urlImagem, nota e data</p>
+<p> Criado ExtratoDeConteudo, responsável por pegar os dados do Json e converter em Conteudo</p>
+
+<p>Desafios: </p>
+<ul>
+<li>Realizado a alteração da classe Conteudo para Record</li>
+<li>Criado a classe de Exception customizada</li>
+<li>Criado um ENUM com Extrator de Conteudo da NASA e IMDB e URL das API</li>
+<li>Exibir o nome da foto da NASA</li>
+<li>Exibir a data da foto da NASA no topo</li>
+</ul>
+
+![Satellites Behind Pinnacles](https://user-images.githubusercontent.com/95001637/180338100-12095c20-fe14-4424-a357-6883de1dd3f9.png)
+
+
