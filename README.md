@@ -29,6 +29,7 @@ Projeto realizado durante a Imersão Java da Alura, onde foi utilizado a API do 
 <li>Centralizar o texto</li>
 <li>Exibir a nota no topo da figurunha</li>
 <li>Selo de aprovado/negado de acordo com a nota</li>
+<li>Redimensionar para 512x512</li>
 </ul>
 
 ![The Godfather](https://user-images.githubusercontent.com/95001637/180095505-e856e807-c426-4432-b3c3-e62fdcfb83f6.png)
