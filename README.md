@@ -2,6 +2,11 @@
 <p align="center">
 <img src="http://img.shields.io/static/v1?label=STATUS&message=EM%20DESENVOLVIMENTO&color=GREEN&style=for-the-badge"/>
 </p>
+<p align="center">
+<img src="https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=java&logoColor=white"/>
+<img src="https://img.shields.io/badge/spring-%236DB33F.svg?style=for-the-badge&logo=spring&logoColor=white"/>
+
+</p>
 
 
 Projeto realizado durante a Imersão Java da Alura, onde foi utilizado a API do IMDB para pegar dados dos Top 250 Filmes e transformar em figurinhas.
