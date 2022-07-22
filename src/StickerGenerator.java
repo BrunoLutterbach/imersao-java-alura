@@ -1,5 +1,3 @@
-
-
 import net.coobird.thumbnailator.Thumbnails;
 
 import javax.imageio.ImageIO;
@@ -10,11 +8,10 @@ import java.io.IOException;
 import java.io.InputStream;
 
 import static java.awt.Transparency.TRANSLUCENT;
-import static java.lang.Integer.parseInt;
 
 public class StickerGenerator {
 
-    public void cria(InputStream inputStream, String nomeArquivo, Double nota, String frase) throws Exception {
+    public void cria(InputStream inputStream, String nomeArquivo, String frase) throws Exception {
 
         // Leitura da imagem
 //        InputStream inputStream = new FileInputStream(new File("entrada/filme.jpg"));
@@ -37,30 +34,8 @@ public class StickerGenerator {
 
         // Escrever uma frase centralizada na nova imagem
         int tamanhoFrase = graphics2D.getFontMetrics().stringWidth(frase);
-        int localFrase = (novaImagem.getWidth() - tamanhoFrase - 100) / 2;
-        if (nota >= 8.5) {
-            frase = "Excelente!";
-        } else if (nota >= 7.5) {
-            frase = "Bom!";
-        } else if (nota >= 6.5) {
-            frase = "Regular!";
-        } else {
-            frase = "Ruim!";
-        }
+        int localFrase = (novaImagem.getWidth() - tamanhoFrase) / 2;
         graphics2D.drawString(frase, localFrase, novaAltura - 80);
-
-        // Escrever a nota no topo na nova imagem e o selo de aprovado / negado
-        int localNota = novaImagem.getHeight() / 20;
-        graphics2D.setColor(Color.YELLOW);
-        graphics2D.drawString(nota + " / 10", 10, localNota);
-        if (nota >= 8.5) {
-            graphics2D.drawImage(ImageIO.read(new File("selos/aprovado.png")), novaImagem.getWidth() - 250 / 2, 0, null);
-        } else if (nota <= 8.4) {
-            graphics2D.drawImage(ImageIO.read(new File("selos/negado.png")), -10, 0, null);
-        }
-
-        // Inserindo selo de acordo com a nota
-
 
         // Nova resolução da imagem(512x512)
         BufferedImage Sticker = resize(novaImagem, 512, 512);
