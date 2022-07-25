@@ -1,6 +1,6 @@
 # <h1 align="center"> Imersão Java Alura </h1>
 <p align="center">
-<img src="http://img.shields.io/static/v1?label=STATUS&message=EM%20DESENVOLVIMENTO&color=GREEN&style=for-the-badge"/>
+<img src="http://img.shields.io/static/v1?label=STATUS&message=%20FINALIZADO&color=black&style=for-the-badge"/>
 </p>
 <p align="center">
 <img src="https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=java&logoColor=white"/>
@@ -66,7 +66,10 @@ Projeto realizado durante a Imersão Java da Alura, onde foi utilizado a API do 
 
 <img src="https://user-images.githubusercontent.com/95001637/180868162-74a0e5d9-5b4c-4cbf-82b5-d67b78b26a92.png">
 
+<hr>
 
+<h3 align="center"> 📖 Aula 05 </h3>
 
-
+<p> Alterado o URL do ENUM API_LINGUAGENS para o Deploy realizado no heroku</p>
+<a href="https://github.com/BrunoLutterbach/linguagens-api">Linguagens Api</a>
 
