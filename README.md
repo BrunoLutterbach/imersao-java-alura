@@ -4,7 +4,6 @@
 </p>
 <p align="center">
 <img src="https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=java&logoColor=white"/>
-<img src="https://img.shields.io/badge/spring-%236DB33F.svg?style=for-the-badge&logo=spring&logoColor=white"/>
 
 </p>
 
@@ -58,5 +57,16 @@ Projeto realizado durante a Imersão Java da Alura, onde foi utilizado a API do 
 </ul>
 
 ![Satellites Behind Pinnacles](https://user-images.githubusercontent.com/95001637/180338100-12095c20-fe14-4424-a357-6883de1dd3f9.png)
+
+<hr>
+
+<h3 align="center"> 📖 Aula 04 </h3>
+
+<p> Foi consumido a API de Linguagens e a criação do Extrato de Conteudo da API de Linguagens </p>
+
+<img src="https://user-images.githubusercontent.com/95001637/180868162-74a0e5d9-5b4c-4cbf-82b5-d67b78b26a92.png">
+
+
+
 
 
