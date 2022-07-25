@@ -6,15 +6,12 @@ import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
-import java.text.SimpleDateFormat;
-import java.time.Instant;
-import java.util.Date;
 
 import static java.awt.Transparency.TRANSLUCENT;
 
 public class StickerGenerator {
 
-    public void cria(InputStream inputStream, String nomeArquivo, String frase, Double nota, String data) throws Exception {
+    public void cria(InputStream inputStream, String nomeArquivo, String frase, Double nota, String data, String ranking) throws Exception {
 
         // Leitura da imagem
 //        InputStream inputStream = new FileInputStream(new File("entrada/filme.jpg"));
@@ -43,8 +40,11 @@ public class StickerGenerator {
         // Adicionar nota/Data do filme na nova imagem
         int localNota = novaImagem.getHeight() / 20;
 
+        if(nota == 0.0 && data == null) {
+            graphics2D.drawString("Rank: " + ranking, 5, 35);
+        }
         if (nota == 0) {
-            graphics2D.drawString("Data: " + data, (novaImagem.getWidth() - graphics2D.getFontMetrics().stringWidth(data) * 3) + 40, 70);
+            graphics2D.drawString("Data: " + data, (novaImagem.getWidth() - 10 * 3) + 40, 70);
         }
         if (nota >= 9.0) {
             graphics2D.drawString("Nota: " + nota, 10, localNota);

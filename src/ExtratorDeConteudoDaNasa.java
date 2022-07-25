@@ -12,8 +12,7 @@ public class ExtratorDeConteudoDaNasa implements ExtratorDeConteudo {
         // Converter a lista de atributos em uma lista de conteudos
         List<Conteudo> conteudos = new ArrayList<>();
         for (Map<String, String> atributos : listaDeAtributos) {
-            Double nota = 0.0;
-            Conteudo conteudo = new Conteudo(atributos.get("title"), atributos.get("url"), nota, atributos.get("date"));
+            Conteudo conteudo = new Conteudo(atributos.get("title"), atributos.get("url"), 0.0, atributos.get("date"), "0");
             conteudos.add(conteudo);
         }
         return conteudos;

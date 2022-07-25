@@ -1,7 +1,8 @@
 public enum ApiUrlEnum {
 
-    API_IMDB("https://raw.githubusercontent.com/alura-cursos/imersao-java/api/TopMovies.json", new ExtratorDeConteudoDoIMDB()),
-    API_NASA("https://api.mocki.io/v2/549a5d8b/NASA-APOD", new ExtratorDeConteudoDaNasa());
+    API_IMDB("https://api.mocki.io/v2/549a5d8b/Top250Movies", new ExtratorDeConteudoDoIMDB()),
+    API_NASA("https://api.mocki.io/v2/549a5d8b/NASA-APOD", new ExtratorDeConteudoDaNasa()),
+    API_LINGUAGENS("http://localhost:8080/linguagens", new ExtratorDeConteudoDoLinguagens());
 
     private String url;
     private ExtratorDeConteudo extrator;
